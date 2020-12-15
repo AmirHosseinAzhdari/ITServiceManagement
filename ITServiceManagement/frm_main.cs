@@ -29,6 +29,11 @@ namespace ITServiceManagement
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+        
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
 
         private void btn_customers_Click(object sender, EventArgs e)
         {
@@ -122,8 +127,8 @@ namespace ITServiceManagement
 
 
 
-
         #region Helper Methods
+
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.colorList.Count);
@@ -148,7 +153,7 @@ namespace ITServiceManagement
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new Font("Microsoft Sans Serif", 12.5F,
+                    currentButton.Font = new Font("Arial", 12.5F,
                         FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                     pnl_titleBar.BackColor = color;
                     pnl_logo.BackColor = ThemeColor.ChangeColorBrighteness(color, -0.3);
@@ -185,7 +190,7 @@ namespace ITServiceManagement
                 {
                     previusBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previusBtn.ForeColor = Color.Gainsboro;
-                    previusBtn.Font = new Font("Microsoft Sans Serif", 10F,
+                    previusBtn.Font = new Font("Arial", 10F,
                         FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
             }
@@ -202,5 +207,6 @@ namespace ITServiceManagement
         }
 
         #endregion
+
     }
 }

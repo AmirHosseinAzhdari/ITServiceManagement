@@ -16,5 +16,10 @@ namespace ITServiceManagement.Forms
         {
             InitializeComponent();
         }
+
+        private void frm_users_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

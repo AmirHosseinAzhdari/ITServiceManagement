@@ -136,5 +136,11 @@
   <ItemGroup>
     <None Include="Resources\4401280.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITServiceManagement.DataLayer\ITServiceManagement.DataLayer.csproj">
+      <Project>{7ae5400c-256a-43fb-be6e-9f7649194b6e}</Project>
+      <Name>ITServiceManagement.DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

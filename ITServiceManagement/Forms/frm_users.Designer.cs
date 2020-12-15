@@ -29,21 +29,21 @@ namespace ITServiceManagement.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grv_users = new MetroFramework.Controls.MetroGrid();
             this.grb_users = new System.Windows.Forms.GroupBox();
             this.tsp_users = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btn_editUser = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btn_addUserTask = new System.Windows.Forms.ToolStripButton();
+            this.btn_printUsers = new System.Windows.Forms.ToolStripButton();
             this.lbl_searchUserRole = new System.Windows.Forms.ToolStripLabel();
             this.cmb_selectUserRole = new System.Windows.Forms.ToolStripComboBox();
             this.lbl_searchUser = new System.Windows.Forms.ToolStripLabel();
             this.txt_searchUser = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.btn_editUser = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.btn_printUsers = new System.Windows.Forms.ToolStripButton();
-            this.btn_addUserTask = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.grv_users)).BeginInit();
             this.grb_users.SuspendLayout();
             this.tsp_users.SuspendLayout();
@@ -61,23 +61,23 @@ namespace ITServiceManagement.Forms
             this.grv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grv_users.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grv_users.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grv_users.DefaultCellStyle = dataGridViewCellStyle5;
             this.grv_users.EnableHeadersVisualStyles = false;
             this.grv_users.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grv_users.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -85,17 +85,17 @@ namespace ITServiceManagement.Forms
             this.grv_users.Name = "grv_users";
             this.grv_users.ReadOnly = true;
             this.grv_users.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grv_users.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grv_users.Size = new System.Drawing.Size(777, 292);
+            this.grv_users.Size = new System.Drawing.Size(918, 326);
             this.grv_users.TabIndex = 0;
             // 
             // grb_users
@@ -105,10 +105,10 @@ namespace ITServiceManagement.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grb_users.Controls.Add(this.grv_users);
             this.grb_users.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_users.Location = new System.Drawing.Point(6, 115);
+            this.grb_users.Location = new System.Drawing.Point(6, 81);
             this.grb_users.Name = "grb_users";
             this.grb_users.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.grb_users.Size = new System.Drawing.Size(789, 329);
+            this.grb_users.Size = new System.Drawing.Size(930, 363);
             this.grb_users.TabIndex = 1;
             this.grb_users.TabStop = false;
             this.grb_users.Text = "لیست کاربران ثبت شده";
@@ -128,39 +128,9 @@ namespace ITServiceManagement.Forms
             this.tsp_users.Location = new System.Drawing.Point(0, 0);
             this.tsp_users.Name = "tsp_users";
             this.tsp_users.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tsp_users.Size = new System.Drawing.Size(801, 54);
+            this.tsp_users.Size = new System.Drawing.Size(942, 54);
             this.tsp_users.TabIndex = 4;
             this.tsp_users.Text = "toolStrip1";
-            // 
-            // lbl_searchUserRole
-            // 
-            this.lbl_searchUserRole.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_searchUserRole.Margin = new System.Windows.Forms.Padding(0, 1, 25, 2);
-            this.lbl_searchUserRole.Name = "lbl_searchUserRole";
-            this.lbl_searchUserRole.Size = new System.Drawing.Size(116, 51);
-            this.lbl_searchUserRole.Text = "فیلتر بر اساس نقش کاربر :";
-            // 
-            // cmb_selectUserRole
-            // 
-            this.cmb_selectUserRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_selectUserRole.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_selectUserRole.Name = "cmb_selectUserRole";
-            this.cmb_selectUserRole.Size = new System.Drawing.Size(121, 54);
-            // 
-            // lbl_searchUser
-            // 
-            this.lbl_searchUser.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_searchUser.Margin = new System.Windows.Forms.Padding(0, 1, 25, 2);
-            this.lbl_searchUser.Name = "lbl_searchUser";
-            this.lbl_searchUser.Size = new System.Drawing.Size(43, 51);
-            this.lbl_searchUser.Text = "جستجو :";
-            // 
-            // txt_searchUser
-            // 
-            this.txt_searchUser.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchUser.MaxLength = 1000000;
-            this.txt_searchUser.Name = "txt_searchUser";
-            this.txt_searchUser.Size = new System.Drawing.Size(150, 21);
             // 
             // toolStripButton2
             // 
@@ -198,18 +168,6 @@ namespace ITServiceManagement.Forms
             this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btn_printUsers
-            // 
-            this.btn_printUsers.Image = global::ITServiceManagement.Properties.Resources.printer;
-            this.btn_printUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_printUsers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_printUsers.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_printUsers.Name = "btn_printUsers";
-            this.btn_printUsers.Size = new System.Drawing.Size(100, 51);
-            this.btn_printUsers.Text = "چاپ لیست کاربران";
-            this.btn_printUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_printUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // btn_addUserTask
             // 
             this.btn_addUserTask.Image = global::ITServiceManagement.Properties.Resources.clipboard;
@@ -222,11 +180,53 @@ namespace ITServiceManagement.Forms
             this.btn_addUserTask.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_addUserTask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // btn_printUsers
+            // 
+            this.btn_printUsers.Image = global::ITServiceManagement.Properties.Resources.printer;
+            this.btn_printUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_printUsers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_printUsers.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_printUsers.Name = "btn_printUsers";
+            this.btn_printUsers.Size = new System.Drawing.Size(100, 51);
+            this.btn_printUsers.Text = "چاپ لیست کاربران";
+            this.btn_printUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_printUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // lbl_searchUserRole
+            // 
+            this.lbl_searchUserRole.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_searchUserRole.Margin = new System.Windows.Forms.Padding(0, 1, 25, 2);
+            this.lbl_searchUserRole.Name = "lbl_searchUserRole";
+            this.lbl_searchUserRole.Size = new System.Drawing.Size(116, 51);
+            this.lbl_searchUserRole.Text = "فیلتر بر اساس نقش کاربر :";
+            // 
+            // cmb_selectUserRole
+            // 
+            this.cmb_selectUserRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_selectUserRole.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_selectUserRole.Name = "cmb_selectUserRole";
+            this.cmb_selectUserRole.Size = new System.Drawing.Size(121, 54);
+            // 
+            // lbl_searchUser
+            // 
+            this.lbl_searchUser.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_searchUser.Margin = new System.Windows.Forms.Padding(0, 1, 25, 2);
+            this.lbl_searchUser.Name = "lbl_searchUser";
+            this.lbl_searchUser.Size = new System.Drawing.Size(43, 51);
+            this.lbl_searchUser.Text = "جستجو :";
+            // 
+            // txt_searchUser
+            // 
+            this.txt_searchUser.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchUser.MaxLength = 1000000;
+            this.txt_searchUser.Name = "txt_searchUser";
+            this.txt_searchUser.Size = new System.Drawing.Size(150, 54);
+            // 
             // frm_users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.ClientSize = new System.Drawing.Size(942, 450);
             this.Controls.Add(this.tsp_users);
             this.Controls.Add(this.grb_users);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

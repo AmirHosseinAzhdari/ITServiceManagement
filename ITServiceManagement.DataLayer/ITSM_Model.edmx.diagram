@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50109f793b1d4d728ccb8a83f1ce82e8" Name="Diagram1">
+        <EntityTypeShape EntityType="ITServiceManagement_DBModel.Roles" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITServiceManagement_DBModel.TicketStatus" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITServiceManagement_DBModel.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITServiceManagement_DBModel.UserTickets" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="ITServiceManagement_DBModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="ITServiceManagement_DBModel.FK_UserTickets_TicketStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ITServiceManagement_DBModel.FK_UserTickets_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

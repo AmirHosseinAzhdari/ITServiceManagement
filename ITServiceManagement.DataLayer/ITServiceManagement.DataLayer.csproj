@@ -71,10 +71,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Repositories\CommonGenericRepository.cs" />
     <Compile Include="Roles.cs">
       <DependentUpon>ITSM_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\CommonGenericRepository.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="TicketStatus.cs">
       <DependentUpon>ITSM_Model.tt</DependentUpon>
@@ -113,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITServiceManagement.Utilities\ITServiceManagement.Utilities.csproj">
+      <Project>{41dd3c21-0e85-4a71-ae65-75bf254cda10}</Project>
+      <Name>ITServiceManagement.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

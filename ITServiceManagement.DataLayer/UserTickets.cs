@@ -15,7 +15,7 @@ namespace ITServiceManagement.DataLayer
     public partial class UserTickets
     {
         public int TicketId { get; set; }
-        public string UserId { get; set; }
+        public System.Guid UserId { get; set; }
         public string Title { get; set; }
         public string description { get; set; }
         public short Status { get; set; }

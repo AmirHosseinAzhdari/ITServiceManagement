@@ -20,11 +20,10 @@ namespace ITServiceManagement.DataLayer
             this.UserTickets = new HashSet<UserTickets>();
         }
     
-        public string UserId { get; set; }
+        public System.Guid UserId { get; set; }
         public string UserName { get; set; }
         public bool Gender { get; set; }
         public string ImageUrl { get; set; }
-        public short Age { get; set; }
         public System.DateTime BirthDay { get; set; }
         public string Address { get; set; }
         public System.DateTime InsertTime { get; set; }

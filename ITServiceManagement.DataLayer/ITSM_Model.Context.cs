@@ -27,7 +27,7 @@ namespace ITServiceManagement.DataLayer
     
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<TicketStatus> TicketStatus { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<UserTickets> UserTickets { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

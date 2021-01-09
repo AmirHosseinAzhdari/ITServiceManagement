@@ -31,6 +31,15 @@ namespace ITServiceManagement.DataLayer.Context
             }
         }
 
+        private CommonGenericRepository<Roles> roleRepository;
+        public CommonGenericRepository<Roles> RoleRepository
+        {
+            get
+            {
+                return roleRepository ?? (roleRepository = new CommonGenericRepository<Roles>(_db));
+            }
+        }
+
         public void Dispose()
         {
             _db.Dispose();

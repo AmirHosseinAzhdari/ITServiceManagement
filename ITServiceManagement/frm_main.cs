@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using ITServiceManagement.AdminForms.Users;
 
 namespace ITServiceManagement
 {
@@ -29,15 +31,143 @@ namespace ITServiceManagement
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-        
+
         private void frm_main_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
+            #region Show Date Time 
+
+            // show date time in main page 
+            PersianCalendar pc = new PersianCalendar();
+
+            // get day name ------------------------------------------------------------------------
+            string dayNamePersian = "";
+            string dayName;
+            dayName = pc.GetDayOfWeek(DateTime.Now).ToString();
+            switch (dayName)
+            {
+                case "Saturday":
+                    {
+                        dayNamePersian = "شنبه";
+                        break;
+                    }
+                case "Sunday":
+                    {
+                        dayNamePersian = "یکشنبه";
+                        break;
+                    }
+                case "Monday":
+                    {
+                        dayNamePersian = "دوشنبه";
+                        break;
+                    }
+                case "Tuesday":
+                    {
+                        dayNamePersian = "سه شنبه";
+                        break;
+                    }
+                case "Wednesday":
+                    {
+                        dayNamePersian = "چهارشنبه";
+                        break;
+                    }
+                case "Thursday":
+                    {
+                        dayNamePersian = "پنجشنبه";
+                        break;
+                    }
+                case "Friday":
+                    {
+                        dayNamePersian = "جمعه";
+                        break;
+                    }
+            }
+
+            // get day of month -------------------------------------------------------------------
+            int dayOfMonth = pc.GetDayOfMonth(DateTime.Now);
+
+            // get month name ---------------------------------------------------------------------
+            string monthNamePersian = "";
+            string month;
+            month = pc.GetMonth(DateTime.Now).ToString();
+            switch (month)
+            {
+                case "1":
+                    {
+                        monthNamePersian = "فروردین";
+                        break;
+                    }
+                case "2":
+                    {
+                        monthNamePersian = "اردیبهشت";
+                        break;
+                    }
+                case "3":
+                    {
+                        monthNamePersian = "خرداد";
+                        break;
+                    }
+                case "4":
+                    {
+                        monthNamePersian = "تیر";
+                        break;
+                    }
+                case "5":
+                    {
+                        monthNamePersian = "مرداد";
+                        break;
+                    }
+                case "6":
+                    {
+                        monthNamePersian = "شهریور";
+                        break;
+                    }
+
+                case "7":
+                    {
+                        monthNamePersian = "مهر";
+                        break;
+                    }
+                case "8":
+                    {
+                        monthNamePersian = "ابان";
+                        break;
+                    }
+                case "9":
+                    {
+                        monthNamePersian = "اذر";
+                        break;
+                    }
+                case "10":
+                    {
+                        monthNamePersian = "دی";
+                        break;
+                    }
+                case "11":
+                    {
+                        monthNamePersian = "بهمن";
+                        break;
+                    }
+                case "12":
+                    {
+                        monthNamePersian = "اسفند";
+                        break;
+                    }
+            }
+
+            // get year --------------------------------------------------------------------------
+            int year = pc.GetYear(DateTime.Now);
+
+            // show date in main page ------------------------------------------------------------
+            lbl_dateTime.Text = $"{dayNamePersian} {dayOfMonth} {monthNamePersian} {year}";
+
+            #endregion
         }
 
         private void btn_customers_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.frm_users(), sender);
+            OpenChildForm(new frm_users(), sender);
         }
 
         private void btn_settings_Click(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿
-namespace ITServiceManagement.Forms
+namespace ITServiceManagement.AdminForms.Users
 {
     partial class frm_users
     {
@@ -32,7 +32,17 @@ namespace ITServiceManagement.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.grv_users = new MetroFramework.Controls.MetroGrid();
+            this.dgv_users = new MetroFramework.Controls.MetroGrid();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsLocked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InsertTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grb_users = new System.Windows.Forms.GroupBox();
             this.tsp_users = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -44,32 +54,42 @@ namespace ITServiceManagement.Forms
             this.cmb_selectUserRole = new System.Windows.Forms.ToolStripComboBox();
             this.lbl_searchUser = new System.Windows.Forms.ToolStripLabel();
             this.txt_searchUser = new System.Windows.Forms.ToolStripTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.grv_users)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.grb_users.SuspendLayout();
             this.tsp_users.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grv_users
+            // dgv_users
             // 
-            this.grv_users.AllowUserToAddRows = false;
-            this.grv_users.AllowUserToDeleteRows = false;
-            this.grv_users.AllowUserToResizeRows = false;
-            this.grv_users.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grv_users.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grv_users.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.grv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_users.AllowUserToAddRows = false;
+            this.dgv_users.AllowUserToDeleteRows = false;
+            this.dgv_users.AllowUserToResizeRows = false;
+            this.dgv_users.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_users.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_users.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_users.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_users.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserName,
+            this.Age,
+            this.PhoneNumber,
+            this.NationalCode,
+            this.IsLocked,
+            this.Role,
+            this.Email,
+            this.InsertTime,
+            this.EmployeeId,
+            this.ID});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -77,14 +97,15 @@ namespace ITServiceManagement.Forms
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grv_users.DefaultCellStyle = dataGridViewCellStyle5;
-            this.grv_users.EnableHeadersVisualStyles = false;
-            this.grv_users.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.grv_users.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grv_users.Location = new System.Drawing.Point(6, 31);
-            this.grv_users.Name = "grv_users";
-            this.grv_users.ReadOnly = true;
-            this.grv_users.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_users.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_users.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_users.EnableHeadersVisualStyles = false;
+            this.dgv_users.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgv_users.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgv_users.Location = new System.Drawing.Point(3, 28);
+            this.dgv_users.Name = "dgv_users";
+            this.dgv_users.ReadOnly = true;
+            this.dgv_users.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -92,18 +113,91 @@ namespace ITServiceManagement.Forms
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grv_users.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.grv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grv_users.Size = new System.Drawing.Size(918, 326);
-            this.grv_users.TabIndex = 0;
+            this.dgv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_users.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_users.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_users.Size = new System.Drawing.Size(924, 332);
+            this.dgv_users.TabIndex = 0;
+            this.dgv_users.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "نام";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.DataPropertyName = "BirthDay";
+            this.Age.HeaderText = "تاریخ تولد";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            this.PhoneNumber.HeaderText = "شماره موبایل";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            // 
+            // NationalCode
+            // 
+            this.NationalCode.DataPropertyName = "NationalCode";
+            this.NationalCode.HeaderText = "شماره ملی";
+            this.NationalCode.Name = "NationalCode";
+            this.NationalCode.ReadOnly = true;
+            // 
+            // IsLocked
+            // 
+            this.IsLocked.DataPropertyName = "IsLocked";
+            this.IsLocked.HeaderText = "وضعیت";
+            this.IsLocked.Name = "IsLocked";
+            this.IsLocked.ReadOnly = true;
+            // 
+            // Role
+            // 
+            this.Role.DataPropertyName = "RoleId";
+            this.Role.HeaderText = "نقش";
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "ایمیل";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // InsertTime
+            // 
+            this.InsertTime.DataPropertyName = "InsertTime";
+            this.InsertTime.HeaderText = "تاریخ ثبت";
+            this.InsertTime.Name = "InsertTime";
+            this.InsertTime.ReadOnly = true;
+            // 
+            // EmployeeId
+            // 
+            this.EmployeeId.DataPropertyName = "EmployeeId";
+            this.EmployeeId.HeaderText = "کد کارمندی";
+            this.EmployeeId.Name = "EmployeeId";
+            this.EmployeeId.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "UserId";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // grb_users
             // 
             this.grb_users.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grb_users.Controls.Add(this.grv_users);
+            this.grb_users.Controls.Add(this.dgv_users);
             this.grb_users.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_users.Location = new System.Drawing.Point(6, 81);
             this.grb_users.Name = "grb_users";
@@ -143,6 +237,7 @@ namespace ITServiceManagement.Forms
             this.toolStripButton2.Text = "افزودن کاربر";
             this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btn_editUser
             // 
@@ -155,6 +250,7 @@ namespace ITServiceManagement.Forms
             this.btn_editUser.Text = "ویرایش کاربر";
             this.btn_editUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_editUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_editUser.Click += new System.EventHandler(this.btn_editUser_Click);
             // 
             // toolStripButton3
             // 
@@ -167,6 +263,7 @@ namespace ITServiceManagement.Forms
             this.toolStripButton3.Text = "حذف کاربر";
             this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // btn_addUserTask
             // 
@@ -206,6 +303,7 @@ namespace ITServiceManagement.Forms
             this.cmb_selectUserRole.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_selectUserRole.Name = "cmb_selectUserRole";
             this.cmb_selectUserRole.Size = new System.Drawing.Size(121, 54);
+            this.cmb_selectUserRole.Click += new System.EventHandler(this.cmb_selectUserRole_Click);
             // 
             // lbl_searchUser
             // 
@@ -221,6 +319,7 @@ namespace ITServiceManagement.Forms
             this.txt_searchUser.MaxLength = 1000000;
             this.txt_searchUser.Name = "txt_searchUser";
             this.txt_searchUser.Size = new System.Drawing.Size(150, 54);
+            this.txt_searchUser.TextChanged += new System.EventHandler(this.txt_searchUser_TextChanged);
             // 
             // frm_users
             // 
@@ -233,7 +332,7 @@ namespace ITServiceManagement.Forms
             this.Name = "frm_users";
             this.Text = "کاربران";
             this.Load += new System.EventHandler(this.frm_users_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grv_users)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.grb_users.ResumeLayout(false);
             this.tsp_users.ResumeLayout(false);
             this.tsp_users.PerformLayout();
@@ -244,7 +343,7 @@ namespace ITServiceManagement.Forms
 
         #endregion
 
-        private MetroFramework.Controls.MetroGrid grv_users;
+        private MetroFramework.Controls.MetroGrid dgv_users;
         private System.Windows.Forms.GroupBox grb_users;
         private System.Windows.Forms.ToolStrip tsp_users;
         private System.Windows.Forms.ToolStripButton btn_printUsers;
@@ -256,5 +355,15 @@ namespace ITServiceManagement.Forms
         private System.Windows.Forms.ToolStripTextBox txt_searchUser;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton btn_addUserTask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NationalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsLocked;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InsertTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

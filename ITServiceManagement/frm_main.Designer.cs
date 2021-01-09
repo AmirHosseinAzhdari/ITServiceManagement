@@ -31,20 +31,20 @@ namespace ITServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_customers = new System.Windows.Forms.Button();
             this.pnl_logo = new System.Windows.Forms.Panel();
+            this.lbl_dateTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_titleBar = new System.Windows.Forms.Panel();
             this.btn_maximaize = new System.Windows.Forms.Button();
             this.btn_minimaize = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.btn_closeChildForm = new System.Windows.Forms.Button();
             this.lbl_mainTitle = new System.Windows.Forms.Label();
             this.pnl_childForms = new System.Windows.Forms.Panel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lbl_dateTime = new System.Windows.Forms.Label();
             this.pcb_main = new System.Windows.Forms.PictureBox();
-            this.btn_closeChildForm = new System.Windows.Forms.Button();
-            this.btn_settings = new System.Windows.Forms.Button();
-            this.btn_customers = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnl_menu.SuspendLayout();
             this.pnl_logo.SuspendLayout();
             this.pnl_titleBar.SuspendLayout();
@@ -64,6 +64,48 @@ namespace ITServiceManagement
             this.pnl_menu.Size = new System.Drawing.Size(200, 561);
             this.pnl_menu.TabIndex = 0;
             // 
+            // btn_settings
+            // 
+            this.btn_settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_settings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_settings.FlatAppearance.BorderSize = 0;
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_settings.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_settings.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_settings.Image = global::ITServiceManagement.Properties.Resources.settings;
+            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.Location = new System.Drawing.Point(0, 120);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btn_settings.Size = new System.Drawing.Size(200, 40);
+            this.btn_settings.TabIndex = 2;
+            this.btn_settings.Text = "        تنظیمات";
+            this.btn_settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            // 
+            // btn_customers
+            // 
+            this.btn_customers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_customers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_customers.FlatAppearance.BorderSize = 0;
+            this.btn_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_customers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_customers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_customers.Image = global::ITServiceManagement.Properties.Resources.customer__1_;
+            this.btn_customers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_customers.Location = new System.Drawing.Point(0, 80);
+            this.btn_customers.Name = "btn_customers";
+            this.btn_customers.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btn_customers.Size = new System.Drawing.Size(200, 40);
+            this.btn_customers.TabIndex = 1;
+            this.btn_customers.Text = "        کاربران";
+            this.btn_customers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_customers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_customers.UseVisualStyleBackColor = true;
+            this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
+            // 
             // pnl_logo
             // 
             this.pnl_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -75,6 +117,18 @@ namespace ITServiceManagement
             this.pnl_logo.Size = new System.Drawing.Size(200, 80);
             this.pnl_logo.TabIndex = 0;
             this.pnl_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_logo_MouseDown);
+            // 
+            // lbl_dateTime
+            // 
+            this.lbl_dateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_dateTime.AutoSize = true;
+            this.lbl_dateTime.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dateTime.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_dateTime.Location = new System.Drawing.Point(33, 53);
+            this.lbl_dateTime.Name = "lbl_dateTime";
+            this.lbl_dateTime.Size = new System.Drawing.Size(137, 24);
+            this.lbl_dateTime.TabIndex = 1;
+            this.lbl_dateTime.Text = "چهارشنبه 25 آذرماه 1399";
             // 
             // label1
             // 
@@ -149,6 +203,19 @@ namespace ITServiceManagement
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             this.btn_close.MouseHover += new System.EventHandler(this.btn_close_MouseHover);
             // 
+            // btn_closeChildForm
+            // 
+            this.btn_closeChildForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_closeChildForm.FlatAppearance.BorderSize = 0;
+            this.btn_closeChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_closeChildForm.Image = global::ITServiceManagement.Properties.Resources.cancel;
+            this.btn_closeChildForm.Location = new System.Drawing.Point(909, 0);
+            this.btn_closeChildForm.Name = "btn_closeChildForm";
+            this.btn_closeChildForm.Size = new System.Drawing.Size(75, 80);
+            this.btn_closeChildForm.TabIndex = 1;
+            this.btn_closeChildForm.UseVisualStyleBackColor = true;
+            this.btn_closeChildForm.Click += new System.EventHandler(this.btn_closeChildForm_Click);
+            // 
             // lbl_mainTitle
             // 
             this.lbl_mainTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -172,23 +239,6 @@ namespace ITServiceManagement
             this.pnl_childForms.Size = new System.Drawing.Size(984, 481);
             this.pnl_childForms.TabIndex = 2;
             // 
-            // toolTip
-            // 
-            this.toolTip.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.toolTip_Draw);
-            // 
-            // lbl_dateTime
-            // 
-            this.lbl_dateTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_dateTime.AutoSize = true;
-            this.lbl_dateTime.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dateTime.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_dateTime.Location = new System.Drawing.Point(33, 53);
-            this.lbl_dateTime.Name = "lbl_dateTime";
-            this.lbl_dateTime.Size = new System.Drawing.Size(137, 24);
-            this.lbl_dateTime.TabIndex = 1;
-            this.lbl_dateTime.Text = "چهارشنبه 25 آذرماه 1399";
-            // 
             // pcb_main
             // 
             this.pcb_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -202,60 +252,9 @@ namespace ITServiceManagement
             this.pcb_main.TabIndex = 0;
             this.pcb_main.TabStop = false;
             // 
-            // btn_closeChildForm
+            // toolTip
             // 
-            this.btn_closeChildForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_closeChildForm.FlatAppearance.BorderSize = 0;
-            this.btn_closeChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_closeChildForm.Image = global::ITServiceManagement.Properties.Resources.cancel;
-            this.btn_closeChildForm.Location = new System.Drawing.Point(909, 0);
-            this.btn_closeChildForm.Name = "btn_closeChildForm";
-            this.btn_closeChildForm.Size = new System.Drawing.Size(75, 80);
-            this.btn_closeChildForm.TabIndex = 1;
-            this.btn_closeChildForm.UseVisualStyleBackColor = true;
-            this.btn_closeChildForm.Click += new System.EventHandler(this.btn_closeChildForm_Click);
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_settings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_settings.FlatAppearance.BorderSize = 0;
-            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_settings.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_settings.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_settings.Image = global::ITServiceManagement.Properties.Resources.settings;
-            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.Location = new System.Drawing.Point(0, 120);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btn_settings.Size = new System.Drawing.Size(200, 40);
-            this.btn_settings.TabIndex = 2;
-            this.btn_settings.Text = "        تنظیمات";
-            this.btn_settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_settings.UseVisualStyleBackColor = true;
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
-            // 
-            // btn_customers
-            // 
-            this.btn_customers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_customers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_customers.FlatAppearance.BorderSize = 0;
-            this.btn_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_customers.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_customers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_customers.Image = global::ITServiceManagement.Properties.Resources.customer__1_;
-            this.btn_customers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_customers.Location = new System.Drawing.Point(0, 80);
-            this.btn_customers.Name = "btn_customers";
-            this.btn_customers.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btn_customers.Size = new System.Drawing.Size(200, 40);
-            this.btn_customers.TabIndex = 1;
-            this.btn_customers.Text = "        کاربران";
-            this.btn_customers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_customers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_customers.UseVisualStyleBackColor = true;
-            this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
+            this.toolTip.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.toolTip_Draw);
             // 
             // frm_main
             // 

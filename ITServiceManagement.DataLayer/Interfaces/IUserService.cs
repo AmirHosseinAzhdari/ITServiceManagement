@@ -8,6 +8,8 @@ namespace ITServiceManagement.DataLayer.Interfaces
 {
     public interface IUserService
     {
+        #region User and Roles
+
         /// <summary>
         /// get image url as string from data base
         /// </summary>
@@ -27,6 +29,28 @@ namespace ITServiceManagement.DataLayer.Interfaces
         /// </summary>
         /// <param name="param"> parameter for filter </param>
         /// <returns>list of users</returns>
-        List<Users> filterByUserName(string param);
+        List<Users> FilterByUserName(string param);
+
+        /// <summary>
+        /// get list of users 
+        /// </summary>
+        /// <param name="roleId"> user role id </param>
+        /// <returns></returns>
+        List<Users> GetUserByRoleId(short roleId);
+
+        #endregion
+
+        #region Tickets
+
+        /// <summary>
+        /// get tickets of user by start date and end date
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
+        List<UserTickets> GetUserTickets(Guid id, DateTime startDate, DateTime endDate);
+
+        #endregion
     }
 }

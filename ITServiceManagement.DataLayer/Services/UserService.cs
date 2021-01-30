@@ -9,13 +9,15 @@ namespace ITServiceManagement.DataLayer.Services
 {
     public class UserService : IUserService
     {
+        #region User and Role
+
         private readonly ITServiceManagement_DBEntities db;
         public UserService(ITServiceManagement_DBEntities context)
         {
             db = context;
         }
 
-        public List<Users> filterByUserName(string param)
+        public List<Users> FilterByUserName(string param)
         {
             return db.Users.Where(u => u.UserName.Contains(param)).ToList();
         }
@@ -32,6 +34,11 @@ namespace ITServiceManagement.DataLayer.Services
             {
                 return null;
             }
+        }
+
+        public List<Users> GetUserByRoleId(short roleId)
+        {
+            return db.Users.Where(u => u.RoleId == roleId).ToList();
         }
 
         public bool UpdateUser(Users user)
@@ -67,5 +74,16 @@ namespace ITServiceManagement.DataLayer.Services
                 return false;
             }
         }
+
+        #endregion
+
+        #region Tickets
+
+        public List<UserTickets> GetUserTickets(Guid id, DateTime startDate, DateTime endDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }

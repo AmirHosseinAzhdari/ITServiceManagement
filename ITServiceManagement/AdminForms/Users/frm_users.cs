@@ -1,4 +1,5 @@
-﻿using ITServiceManagement.DataLayer;
+﻿using ITServiceManagement.AdminForms.Users.Tickets;
+using ITServiceManagement.DataLayer;
 using ITServiceManagement.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -64,11 +65,6 @@ namespace ITServiceManagement.AdminForms.Users
             }
         }
 
-        private void cmb_selectUserRole_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             if (dgv_users.CurrentRow != null)
@@ -103,16 +99,54 @@ namespace ITServiceManagement.AdminForms.Users
         private void txt_searchUser_TextChanged(object sender, EventArgs e)
         {
             using (UnitOfWork db = new UnitOfWork())
-                dgv_users.DataSource = db.UserService.filterByUserName(txt_searchUser.Text);
+                dgv_users.DataSource = db.UserService.FilterByUserName(txt_searchUser.Text);
+        }
+
+        private void btn_addUserTask_Click(object sender, EventArgs e)
+        {
+            if (dgv_users.CurrentRow != null)
+            {
+                frm_tickets f = new frm_tickets();
+                f.ShowDialog();
+            }
+            else
+            {
+                RtlMessageBox.Show("لطفا شخصی را انتخاب کنید", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BindGrid()
         {
+            dgv_users.AutoGenerateColumns = false;
             using (UnitOfWork db = new UnitOfWork())
             {
-                dgv_users.AutoGenerateColumns = false;
-                var user = db.UserRepository.Get();
-                dgv_users.DataSource = user;
+                dgv_users.DataSource = db.UserRepository.Get();
+            }
+        }
+
+        private void cmb_selectUserRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmb_selectUserRole.Text)
+            {
+                case "مدیریت":
+                    using (UnitOfWork db = new UnitOfWork())
+                        dgv_users.DataSource = db.UserService.GetUserByRoleId(1);
+                    break;
+                case "مدیر آی تی":
+                    using (UnitOfWork db = new UnitOfWork())
+                        dgv_users.DataSource = db.UserService.GetUserByRoleId(2);
+                    break;
+                case "کارمندان":
+                    using (UnitOfWork db = new UnitOfWork())
+                        dgv_users.DataSource = db.UserService.GetUserByRoleId(3);
+                    break;
+                case "کاربر عادی":
+                    using (UnitOfWork db = new UnitOfWork())
+                        dgv_users.DataSource = db.UserService.GetUserByRoleId(4);
+                    break;
+                default:
+                    BindGrid();
+                    break;
             }
         }
     }

@@ -7,10 +7,10 @@
       <Diagram DiagramId="50109f793b1d4d728ccb8a83f1ce82e8" Name="Diagram1">
         <EntityTypeShape EntityType="ITServiceManagement_DBModel.Roles" Width="1.5" PointX="0.75" PointY="2.375" />
         <EntityTypeShape EntityType="ITServiceManagement_DBModel.TicketStatus" Width="1.5" PointX="3" PointY="7.375" />
-        <EntityTypeShape EntityType="ITServiceManagement_DBModel.UserTickets" Width="1.5" PointX="5.25" PointY="1.625" />
-        <AssociationConnector Association="ITServiceManagement_DBModel.FK_UserTickets_TicketStatus" />
         <EntityTypeShape EntityType="ITServiceManagement_DBModel.Users" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ITServiceManagement_DBModel.UserTickets" Width="1.5" PointX="5.25" PointY="1.375" />
         <AssociationConnector Association="ITServiceManagement_DBModel.FK_Users_Roles" />
+        <AssociationConnector Association="ITServiceManagement_DBModel.FK_UserTickets_TicketStatus" />
         <AssociationConnector Association="ITServiceManagement_DBModel.FK_UserTickets_Users" />
       </Diagram>
     </edmx:Diagrams>

@@ -478,8 +478,10 @@ namespace ITServiceManagement.AdminForms.Users
             // 
             // frm_addOrEditUser
             // 
+            this.AcceptButton = this.btn_ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_cancel;
             this.ClientSize = new System.Drawing.Size(731, 485);
             this.Controls.Add(this.grb_userRole);
             this.Controls.Add(this.grb_userInfo);

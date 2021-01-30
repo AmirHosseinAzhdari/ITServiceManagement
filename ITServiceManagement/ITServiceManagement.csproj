@@ -77,6 +77,12 @@
     <Compile Include="AdminForms\Users\frm_addOrEditUser.Designer.cs">
       <DependentUpon>frm_addOrEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\Users\Tickets\UserTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\Users\Tickets\UserTickets.Designer.cs">
+      <DependentUpon>UserTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\Users\frm_users.resx">
       <DependentUpon>frm_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Users\Tickets\UserTickets.resx">
+      <DependentUpon>UserTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>

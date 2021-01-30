@@ -16,10 +16,12 @@ namespace ITServiceManagement.DataLayer
     {
         public int TicketId { get; set; }
         public System.Guid UserId { get; set; }
+        public System.Guid OwnerId { get; set; }
         public string Title { get; set; }
-        public string description { get; set; }
+        public string Description { get; set; }
         public short Status { get; set; }
         public string Priority { get; set; }
+        public bool IsSuccessfull { get; set; }
         public System.DateTime InsertTime { get; set; }
         public Nullable<System.DateTime> StartTime { get; set; }
         public Nullable<System.DateTime> EndTime { get; set; }
